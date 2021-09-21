@@ -9,162 +9,85 @@ const shop = document.getElementById('shop');
 const shoped = document.getElementById('shoped');
 
 
-//$('#add').click(function(){
-    
-//    let round = parseInt(numberRound.textContent);
-//    let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-//    let roundTotal = round + rollDice;
-//    numberRound.textContent = roundTotal;
-  
-//});
-
-//$('#hold').click(function() {
-  //if(shop.style.display=="inline-block"){
-//    let a = parseInt(numberGlobal.textContent);
-//    let b = a + eval(numberRound.textContent);
-//    numberGlobal.textContent = b;
-//    (numberRound.textContent) = "0";
-//    //shop.style.display="none"
-  //}else{
-  //  shoped.style.display="inline-block"
-  //}
-//});
-
-// -$('.adder').click(function(){
- //  - let rounded = parseInt(numberRounded.textContent);
- //  - let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-  // - let roundedTotal = rounded + rollDice;
-  // - numberRounded.textContent = roundedTotal;
-//})
-
-//document.getElementsByName('holder')
-//$('.holder').click(function(){
-//   - let a = parseInt(numberGlobaled.textContent);
-//   - let b = a + eval(numberRounded.textContent);
-//   - numberGlobaled.textContent = b;
-//   - (numberRounded.textContent) = "0";
-//})
-  //} else
-   //if (shoped.style.display="inline-block") {
-    //    let rounded = parseInt(numberRounded.textContent);
-   //     let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-   //     let roundedTotal = rounded + rollDice;
-   //     numberRounded.textContent = roundedTotal;
-
-     // $('#hold').click(function(){
-  
-       // let a = parseInt(numberGlobaled.textContent)
-      //  let b = a + eval(numberRounded.textContent)
-      //  numberGlobaled.textContent = b
-      //  numberRounded.textContent = "0"
-      //  btnHold.addEventListener('click', addGlobaled)
-      //  $('#shop').css('display', 'inline-block')
-      //  $('#shoped').css('display', ' none')
-        
-      //  });
-  //}else
-   //if (shoped.style.display==="none") {
-   //     let round = parseInt(numberRound.textContent);
-   //     let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-   //     let roundTotal = round + rollDice;
-   //     numberRound.textContent = roundTotal;
-      
-     // $('#hold').click(function() {
-     //   let a = parseInt(numberGlobal.textContent);
-     //   let b = a + eval(numberRound.textContent);
-     //   numberGlobal.textContent = b;
-     //   numberRound.textContent = "0";
-        //$('#shop').css('display', 'none');
-        //$('#shoped').css('display', 'inline-block');
-      
-   // });
-  //} else 
- // if (shop.style.display = "none") {
-   //   let rounded = parseInt(numberRounded.textContent);
-   //   let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-    //  let roundedTotal = rounded + rollDice;
-    //  numberRounded.textContent = roundedTotal;
-
-    //  $('#hold').click(function() {
-  
-     //   let a = parseInt(numberGlobaled.textContent)
-      //  let b = a + eval(numberRounded.textContent)
-      //  numberGlobaled.textContent = b
-      //  numberRounded.textContent = "0"
-      //  btnHold.addEventListener('click', addGlobaled)
-        //$('#shop').css('display', 'inline-block')
-        //$('#shoped').css('display', ' none')
-        
-     // });
- // }
-//});
-
-
-//SI point Rouge allume ALORS 'add', 'hold',
-//SINON 'adder', 'holder'
-
-//if(shop.style.display=="inline-block"){
-//  add()+hold()
-//}else{
-//  adder()+holder()
-//}
 $( "#hold" ).click(function() {
   $( "#shop" ).toggle();
     $( "#shoped" ).toggle();
 });
-//add()
+
 function add(){
 
-  if(document.getElementById('shop').style.display==="inline-block"){
+  if(shop.style.display==="inline-block"){
     let round = parseInt(numberRound.textContent);
       let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-      let roundTotal = round + rollDice;
-      numberRound.textContent = roundTotal;
+        if(rollDice!=1){
+          let roundTotal = round + rollDice;
+          numberRound.textContent = roundTotal;
+        } else{
+          numberRound.textContent = 0;
+          btnHold.click();
+        }
   } else if(shoped.style.display==="inline-block") {
-    let rounded = parseInt(numberRounded.textContent);
+      let rounded = parseInt(numberRounded.textContent);
       let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-      let roundedTotal = rounded + rollDice;
-      numberRounded.textContent = roundedTotal;
+        if(rollDice!=1){
+          let roundedTotal = rounded + rollDice;
+          numberRounded.textContent = roundedTotal;
+        } else{
+          numberRounded.textContent = 0;
+          btnHold.click();
+        }
+     
   }else if(shop.style.display==="none"){
     let rounded = parseInt(numberRounded.textContent);
       let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-      let roundedTotal = rounded + rollDice;
-      numberRounded.textContent = roundedTotal;
+        if(rollDice!=1){
+          let roundedTotal = rounded + rollDice;
+          numberRounded.textContent = roundedTotal;
+        } else{
+          numberRounded.textContent = 0;
+          btnHold.click();
+        }
+      
   }else{
     let round = parseInt(numberRound.textContent);
       let rollDice = (Math.round(Math.random() * (6 - 1) + 1));
-      let roundTotal = round + rollDice;
-      numberRound.textContent = roundTotal;
+        if(rollDice!=1){
+          let roundTotal = round + rollDice;
+          numberRound.textContent = roundTotal;
+        } else{
+          numberRound.textContent = 0;
+          btnHold.click();
+        }
+      
   }
 }
 
 function hold(){
-  if(document.getElementById('shop').style.display==="inline-block"){
+  if(shop.style.display==="inline-block"){
     let a = parseInt(numberGlobal.textContent);
       let b = a + eval(numberRound.textContent);
       numberGlobal.textContent = b;
       (numberRound.textContent) = "0";
-      //shop.style.display="none"
+     
   }else if(shoped.style.display==="none") {
-    let a = parseInt(numberGlobaled.textContent)
-      let b = a + eval(numberRounded.textContent)
-      numberGlobaled.textContent = b
-      numberRounded.textContent = "0"
-      //btnHold.addEventListener('click', addGlobaled)
-      //$('#shop').css('display', 'inline-block')
-      //$('#shoped').css('display', ' none')
-  }else if(shoped.style.display==="inline-block"){
-    let a = parseInt(numberGlobaled.textContent)
-      let b = a + eval(numberRounded.textContent)
-      numberGlobaled.textContent = b
-      numberRounded.textContent = "0"
+    let a = parseInt(numberGlobaled.textContent);
+      let b = a + eval(numberRounded.textContent);
+      numberGlobaled.textContent = b;
+      numberRounded.textContent = "0";
+    
+  }else if(shoped.style.display==="inline-block")
+  {
+    let a = parseInt(numberGlobaled.textContent);
+      let b = a + eval(numberRounded.textContent);
+      numberGlobaled.textContent = b;
+      numberRounded.textContent = "0";
   }else {
     let a = parseInt(numberGlobal.textContent);
       let b = a + eval(numberRound.textContent);
       numberGlobal.textContent = b;
       (numberRound.textContent) = "0";
-      //shop.style.display="none"
   }
 }
 btnRoll.addEventListener("click", add)
 btnHold.addEventListener("click", hold)
+
