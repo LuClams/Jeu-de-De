@@ -68,12 +68,23 @@ function hold(){
       let b = a + eval(numberRound.textContent);
       numberGlobal.textContent = b;
       (numberRound.textContent) = "0";
+        if(b >= 100){
+          $('#de').html('<div>PLAYER 1 WINNER !!<div>').css('font-size', '5rem').css('color', 'red');
+          btnRoll.removeEventListener("click", add);
+        } else {
+        }
      
   }else if(shoped.style.display==="none") {
     let a = parseInt(numberGlobaled.textContent);
       let b = a + eval(numberRounded.textContent);
       numberGlobaled.textContent = b;
       numberRounded.textContent = "0";
+        if(b >= 100){
+          $('#de').html('<div>PLAYER 2 WINNER !!<div>').css('font-size', '5rem').css('color', 'red');
+          btnRoll.removeEventListener("click", add);
+        } else {
+          
+        }
     
   }else if(shoped.style.display==="inline-block")
   {
@@ -81,13 +92,25 @@ function hold(){
       let b = a + eval(numberRounded.textContent);
       numberGlobaled.textContent = b;
       numberRounded.textContent = "0";
+       
+        if(b >= 100){
+          $('#de').html('<div>PLAYER 2 WINNER !!<div>').css('font-size', '5rem').css('color', 'red');
+          btnRoll.removeEventListener("click", add);
+        } else {
+         
+        }
   }else {
     let a = parseInt(numberGlobal.textContent);
       let b = a + eval(numberRound.textContent);
       numberGlobal.textContent = b;
       (numberRound.textContent) = "0";
+        if(b >= 100){
+          $('#de').html('<div>PLAYER 1 WINNER !!<div>').css('font-size', '5rem').css('color', 'red');
+          btnRoll.removeEventListener("click", add);
+        } else {
+       
+        }
   }
 }
 btnRoll.addEventListener("click", add)
 btnHold.addEventListener("click", hold)
-
