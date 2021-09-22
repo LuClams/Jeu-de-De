@@ -2,13 +2,11 @@
 const newGame = document.getElementById('new-game');
 
 function New() {
-    alert('Voulez-vous vraiment recommencer la partie ? Tous les compteurs seront remis à 0');
-
+  var r = confirm('Voulez-vous vraiment recommencer la partie ? Tous les compteurs seront remis à 0');
+  if (r == true) {
+    location.reload();
+  } else {
+    
+  }
 }
-newGame.addEventListener("click", New); 
-
-// Deuxième solution pour afficher l'alert de Nouvelle partie (JQUERY)
-
-//$( '#new-game' ).click(function() {
-//    alert( 'Voulez-vous vraiment recommencer la partie ? Tous les compteurs seront remis à 0.' );
-//});
+newGame.addEventListener("click", New);
