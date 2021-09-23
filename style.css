@@ -1,0 +1,47 @@
+html {
+    border: 1rem solid brown;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;  
+  }
+  
+  #player2 {
+    display: none;
+  }
+  
+  a{
+   text-decoration: none; 
+   color: black;
+  }
+  
+  a:hover {
+    color: black;
+  } 
+  #global, #globaled {
+    color: brown;
+    font-size: 4em;
+  }
+  
+  #current-round, #current-rounded {
+    color: black;
+  }
+  
+  #round, #rounded {
+    color: white;
+  }
+  
+  svg {
+    color: rgb(236, 10, 10);
+  }
+  
+  #de > svg {
+    color: black;
+  } 
+  
+  #div-round, #div-rounded {
+    background-color:red;
+    
+  }
+  
+  
