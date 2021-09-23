@@ -8,12 +8,13 @@ var resultGlobaled = document.getElementById('globaled');
 const player1 = document.getElementById('player1');
 const player2 = document.getElementById('player2');
 
-
+//Changement de joueur symbolisé par le point rouge
 $( "#hold" ).click(function() {
   $( "#player1" ).toggle();
     $( "#player2" ).toggle();
 });
 
+//Lancé du dé et affectation de la valeur de sortie au score courant pour chaque joueur 
 function add(){
 
   if(player1.style.display==="inline-block"){
@@ -62,6 +63,7 @@ function add(){
   }
 }
 
+//Affectation de la valeur du score courant au score global pour chaque joueur lorsqu'il appuie sur le bouton Hold. Une fois les 100 points atteint on affiche le gagnant.
 function hold(){
   if(player1.style.display==="inline-block"){
     let a = parseInt(resultGlobal.textContent);
@@ -119,7 +121,7 @@ function hold(){
 btnRoll.addEventListener("click", add)
 btnHold.addEventListener("click", hold)
 
-
+// Recommencer une nouvelle partie
 const newGame = document.getElementById('new-game');
 
 function New() {
